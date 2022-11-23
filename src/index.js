@@ -32,7 +32,7 @@ redisClient.set('products', 'products...');
 //Create a route
 app.get('/data', async (req,res)=>{
     const products = await redisClient.get('products');
-    res.send(`<h1>Hello from aws_docker_nodejs_app by Amera BOUDIA</h1> <h2>${products}</h2>`);
+    res.send(`<h1>Hello from aws_docker_nodejs_app from docker_hub aws</h1> <h2>${products}</h2>`);
 });
 
 app.listen(PORT, ()=>console.log(`App is runnnig on port : ${PORT}`));
