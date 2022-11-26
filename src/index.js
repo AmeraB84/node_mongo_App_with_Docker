@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const redis = require('redis');
+const os = require('os');
 //Init server 
 const PORT = 4000;
 const app = express();
@@ -25,13 +26,14 @@ mongoose.connect(URI).then(()=>console.log('connected to db...')).catch((err)=>c
 
 //Create a route
 
-app.get('/',(req,res)=>res.send('<h1>Hello from aws_docker_nodejs_app by Amera BOUDIA !!</h1>'));
+app.get('/',(req,res)=>res.send('<h1>Hello from aws_docker_nodejs_app by Amera BOUDIA from watchtower YES !!</h1>'));
 //set this value in memory cache 
 redisClient.set('products', 'products...');
 
 //Create a route
 app.get('/data', async (req,res)=>{
     const products = await redisClient.get('products');
+    console.log(os.hostname());
     res.send(`<h1>Hello from aws_docker_nodejs_app from docker_hub aws</h1> <h2>${products}</h2>`);
 });
 
