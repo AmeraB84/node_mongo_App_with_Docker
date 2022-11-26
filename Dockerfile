@@ -15,4 +15,4 @@ COPY . .
 ENV PORT=4000
 EXPOSE ${PORT}
 #Exécuter la node app
-CMD ["npm","run","start-dev"]
+#CMD ["npm","run","start-dev"]
