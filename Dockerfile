@@ -7,7 +7,7 @@ ARG NODE_ENV
 
 RUN if [ NODE_ENV = "developpement" ]; \
     then npm install;\
-    else npm install --only=production; \
+    else npm install --production; \
     fi 
 COPY . .
 ENV PORT=3000
