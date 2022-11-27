@@ -3,8 +3,8 @@ services:
   node_app:
     #container_name: express_app_container
     image: amerab/node_mongo_nginx_app
-    ports:
-      - "4000:4000"
+    # ports:
+    #   - "4000:4000"
     env_file:
       - ./.env
     deploy:
