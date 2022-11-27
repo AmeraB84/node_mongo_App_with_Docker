@@ -26,7 +26,7 @@ mongoose.connect(URI).then(()=>console.log('connected to db...')).catch((err)=>c
 
 //Create a route
 
-app.get('/',(req,res)=>res.send('<h1>Hello from aws_docker_nodejs_app by Amera BOUDIA from watchtower YES !!</h1>'));
+app.get('/',(req,res)=>res.send('<h1>Hello from aws_docker_nodejs_app by Amera BOUDIA for docker swarm !!</h1>'));
 //set this value in memory cache 
 redisClient.set('products', 'products...');
 
